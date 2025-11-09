@@ -1,0 +1,32 @@
+.about-container {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 10px;
+  text-align: center;
+  line-height: 1.6;
+  background-color: white;
+}
+
+.about-title  {
+  font-size: 1.8rem;
+  color:black;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+h3 {
+  color: blue;
+}
+
+.about-text ,about-list{
+  font-size: 20px;
+  color: black;
+}
+about-list ul{
+  font-size: 20px;
+  color:rgb(0, 255, 106);
+}
+
+
+
+
