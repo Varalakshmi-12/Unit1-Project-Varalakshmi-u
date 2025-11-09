@@ -4,7 +4,7 @@ import "./Footer.css";
 export default function Footer() {
   const [dateTime, setDateTime] = useState(new Date());
 
-  useEffect(() => {
+  useEffect(()=> {
     // Update every second
     const timer = setInterval(() => {
       setDateTime(new Date());
