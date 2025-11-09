@@ -12,3 +12,21 @@
    padding-bottom:300px;
 
    }
+
+.shift-message {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  background-color: #d6e2db;
+  padding: 10px 15px;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.nav-home a:hover{
+    color:white;
+    padding: 1px 10px;
+    background-color:rgb(0, 255, 64);
+}
