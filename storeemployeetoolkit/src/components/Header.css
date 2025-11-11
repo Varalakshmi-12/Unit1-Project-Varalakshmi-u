@@ -37,7 +37,7 @@
 .nav-left,
 .nav-right {
   display: flex;
-  gap: 25px;
+  gap: 10px;
 }
 
 

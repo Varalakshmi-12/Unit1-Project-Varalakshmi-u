@@ -1,7 +1,7 @@
 #root {
   background-color: rgb(89, 89, 230);
   color: black;
-  max-width: 12800px;
+  max-width: 1248px;
   margin: 0 auto;
   
   text-align: center;
@@ -29,4 +29,52 @@
     color:white;
     padding: 1px 10px;
     background-color:rgb(0, 255, 64);
+}
+
+/* Large screens (desktop) */
+@media (min-width: 1248px) {
+  .button-display {
+    flex-direction: row;
+  }
+  .header-title {
+  font-size: 30px;
+}
+}
+
+/* Medium screens (tablet) */
+@media (max-width: 768px) {
+  .button-display {
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  
+}
+
+/* Small screens (mobile) */
+@media (max-width: 480px) {
+  .button-display {
+    flex-direction: column;
+    gap: 100px;
+  }
+  
+  .nav-right {
+    flex-direction: column;
+    gap :10px;
+  }
+
+  .Button-label{
+    font-size: 20;
+  }
+  
+
+  
+  .header-title {
+    font-size: 20px;
+
+  }
+
+  .footer {
+    font-size: 16px;
+  }
 }
