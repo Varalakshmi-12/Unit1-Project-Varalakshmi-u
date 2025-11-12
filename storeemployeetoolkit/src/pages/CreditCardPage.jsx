@@ -1,0 +1,107 @@
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+
+
+export default function CreditCardSignup() {
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    address: "",
+    cards: "",
+  });
+
+  const [errors, setErrors] = useState({});
+  const [submitted, setSubmitted] = useState(false);
+
+  
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    
+      setSubmitted(true);
+      };
+
+  return (
+    <main className="form-container">
+      <h2>Credit Card Signup</h2>
+
+      {submitted ? (
+        <p className="success">✅ Thank you, {formData.name}! Your form has been submitted.</p>
+      ) : (
+        <form onSubmit={handleSubmit}>
+          <section>
+            <label>Name:</label>
+            <input
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+            />
+            {errors.name && <span className="error">{errors.name}</span>}
+          </section>
+
+          <section>
+            <label>Phone:</label>
+            <input
+              type="text"
+              name="phone"
+              value={formData.phone}
+              onChange={handleChange}
+            />
+            {errors.phone && <span className="error">{errors.phone}</span>}
+          </section>
+
+          <section>
+            <label>Email:</label>
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+            />
+            {errors.email && <span className="error">{errors.email}</span>}
+          </section>
+
+          <section>
+            <label>Address:</label>
+            <textarea
+              
+              name="address"
+              value={formData.address}
+              onChange={handleChange}
+            ></textarea>
+            {errors.address && <span className="error">{errors.address}</span>}
+          </section>
+
+          <section>
+            <label>Number of Cards:</label>
+            <select name="cards" value={formData.cards} onChange={handleChange}>
+              <option value="">-- Select --</option>
+              <option value="1">1 Card</option>
+              <option value="2">2 Cards</option>
+              <option value="3">3 Cards</option>
+            </select>
+            {errors.cards && <span className="error">{errors.cards}</span>}
+          </section>
+
+          <button type="submit">Submit</button>
+        </form>
+
+        
+      )}
+          <section>
+            <nav className="nav-home">
+              <Link to="/">Go Back to Home</Link>
+              </nav>
+            </section>  
+    </main>
+     
+  );
+}
+
