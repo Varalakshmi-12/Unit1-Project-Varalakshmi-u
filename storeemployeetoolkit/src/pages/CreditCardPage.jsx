@@ -14,6 +14,18 @@ export default function CreditCardSignup() {
   const [errors, setErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);
 
+  const validate = () => {
+    const newErrors = {};
+    if (!formData.name.trim()) newErrors.name = "Name is required";
+    if (!/^\d{10}$/.test(formData.phone))
+      newErrors.phone = "Enter a valid 10-digit phone number";
+    if (!/\S+@\S+\.\S+/.test(formData.email))
+      newErrors.email = "Enter a valid email";
+    if (!formData.address.trim()) newErrors.address = "Address is required";
+    if (!formData.cards) newErrors.cards = "Please select number of cards";
+    return newErrors;
+  };
+
   
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -22,10 +34,13 @@ export default function CreditCardSignup() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
-    
+    const newErrors = validate();
+    setErrors(newErrors);
+
+    if (Object.keys(newErrors).length === 0) {
       setSubmitted(true);
-      };
+    }
+  };
 
   return (
     <main className="form-container">
