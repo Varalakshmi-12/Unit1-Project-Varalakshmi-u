@@ -66,6 +66,10 @@
   .Button-label{
     font-size: 20;
   }
+
+.shift-buttons {
+  flex-direction: column;
+}
   
 
   
