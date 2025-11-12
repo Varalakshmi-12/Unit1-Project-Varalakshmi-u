@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import "./CreditCardPage.css";
 
 
 export default function CreditCardSignup() {
@@ -47,7 +48,7 @@ export default function CreditCardSignup() {
       <h2>Credit Card Signup</h2>
 
       {submitted ? (
-        <p className="success">✅ Thank you, {formData.name}! Your form has been submitted.</p>
+        <p className="success">Thank you, {formData.name}! Your form has been submitted.</p>
       ) : (
         <form onSubmit={handleSubmit}>
           <section>
