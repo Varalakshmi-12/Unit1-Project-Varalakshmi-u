@@ -87,6 +87,9 @@ export default function CreditCardSignup() {
           <section>
             <label>Address:</label>
             <textarea
+            spellCheck="false"
+              data-gramm="false"
+              data-gramm_editor="false"
               
               name="address"
               value={formData.address}
@@ -99,9 +102,9 @@ export default function CreditCardSignup() {
             <label>Number of Cards:</label>
             <select name="cards" value={formData.cards} onChange={handleChange}>
               <option value="">-- Select --</option>
-              <option value="1">1 Card</option>
-              <option value="2">2 Cards</option>
-              <option value="3">3 Cards</option>
+              <option value="1">1 </option>
+              <option value="2">2 </option>
+              <option value="3">3 </option>
             </select>
             {errors.cards && <span className="error">{errors.cards}</span>}
           </section>
