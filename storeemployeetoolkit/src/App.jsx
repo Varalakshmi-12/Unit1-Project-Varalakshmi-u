@@ -6,6 +6,7 @@ import HomePage from "./pages/HomePage";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import ShiftPage from "./pages/ShiftPage";
+import CreditCardSignup from "./pages/CreditCardPage";
 import "./index.css";
 
 
@@ -17,7 +18,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/clock" element={<ShiftPage />} />
-          
+          <Route path="/creditcard" element={<CreditCardSignup />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
