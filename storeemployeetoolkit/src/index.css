@@ -32,7 +32,7 @@
 }
 
 /* Large screens (desktop) */
-@media (min-width: 1248px) {
+@media (min-width: 900px) {
   .button-display {
     flex-direction: row;
   }
@@ -40,13 +40,33 @@
   font-size: 30px;
 }
 }
+@media (min-width: 601px) and (max-width: 899px) {
+  .button-display  {
+   
+   flex: 1 1 45%;
+    
+    
+  }
+}
 
 /* Medium screens (tablet) */
-@media (max-width: 768px) {
+@media (min-width: 481px) and (max-width: 600px) {
   .button-display {
-    flex-direction: row;
-    gap: 15px;
+   
+   flex: 1 1 45%;
+    
+    
   }
+  .nav-right {
+    flex-direction: column;
+    gap :10px;
+  }
+  .shift-buttons {
+  
+   
+   flex: 1 1 45%;
+    
+}
 
   
 }
@@ -55,7 +75,7 @@
 @media (max-width: 480px) {
   .button-display {
     flex-direction: column;
-    gap: 100px;
+    gap: 200px;
   }
   
   .nav-right {
