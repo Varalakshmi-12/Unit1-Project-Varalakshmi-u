@@ -3,6 +3,7 @@ import { mockItems} from "../testdata/mockData";
 import CartItem from "../components/CartItem";
 import Button from "../components/Button";
 import { Link } from "react-router-dom";
+import "./CartPage.css";
 
 
 export default function CartPage() {
@@ -51,7 +52,7 @@ export default function CartPage() {
 
   const handlePayment = () => {
     if (cart.length === 0) {
-      setMessage("Cart is empty!");
+      setMessage("🛒Cart is empty!");
       return;
     }
     
@@ -97,9 +98,10 @@ export default function CartPage() {
 
 return (
     <section>
+        <div className="cart-container">
     
 
-      <h1>Customer Checkout</h1>
+      <h1>Customer Cart Checkout</h1>
 
       <div className="input-section">
         <input
@@ -127,6 +129,7 @@ return (
       </div>
 
       <Button label="Pay Now" onClick={handlePayment} />
+      </div>
 
       <nav className="nav-home">
       <Link to="/">Go Back to Home</Link>
