@@ -103,7 +103,7 @@ return (
 
         <Button label="Add Item" onClick={addItem} />
         
-        <Button label="Pay Now" onClick={handlePayment} />
+        
       </div>
       {message && <p className="message">{message}</p>}
       <CartItem
@@ -111,6 +111,14 @@ return (
         updateQuantity={updateQuantity}
         deleteItem={deleteItem}
       />
+
+      <div className="totals">
+        <p>Subtotal: </p>
+        <p>Tax (8%):</p>
+        <h3>Total: </h3>
+      </div>
+
+      <Button label="Pay Now" onClick={handlePayment} />
 
       <nav className="nav-home">
       <Link to="/">Go Back to Home</Link>
