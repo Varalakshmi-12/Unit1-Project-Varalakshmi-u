@@ -13,5 +13,13 @@ export default function CartItem({ cart, updateQuantity, deleteItem }) {
           <th>Delete</th>
         </tr>
       </thead>
+      <tbody>
+        {cart.map(item => (
+          <tr key={item.id}>
+            <td>{item.name}</td>
+            <td>{item.price}</td>
+          </tr>
+        ))}
+        </tbody>
       </table>
   )}

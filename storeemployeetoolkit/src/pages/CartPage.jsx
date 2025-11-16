@@ -83,6 +83,14 @@ export default function CartPage() {
     setCart((prev) => prev.filter((item) => item.id !== id));
   };
 
+  // Calculate totals
+  const subtotal = cart.reduce(
+    (sum, item) => sum + item.price * item.quantity,
+    0
+  );
+  const tax = subtotal * 0.08;
+  const total = subtotal + tax;
+
 
 
 
@@ -113,9 +121,9 @@ return (
       />
 
       <div className="totals">
-        <p>Subtotal: </p>
-        <p>Tax (8%):</p>
-        <h3>Total: </h3>
+        <p>Subtotal: ${subtotal.toFixed(2)}</p>
+        <p>Tax (8%): ${tax.toFixed(2)}</p>
+        <h3>Total: ${total.toFixed(2)}</h3>
       </div>
 
       <Button label="Pay Now" onClick={handlePayment} />
