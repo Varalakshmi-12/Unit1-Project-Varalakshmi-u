@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { mockItems} from "../testdata/mockData";
+import CartItem from "../components/CartItem";
 import Button from "../components/Button";
 import { Link } from "react-router-dom";
 
@@ -65,6 +66,25 @@ export default function CartPage() {
     }, 2000);
   };
 
+  // Update quantity
+  const updateQuantity = (id, value) => {
+    const qty = parseInt(value);
+    if (qty < 1 || isNaN(qty)) return;
+
+    setCart((prev) =>
+      prev.map((item) =>
+        item.id === id ? { ...item, quantity: qty } : item
+      )
+    );
+  };
+
+   // Delete Item
+  const deleteItem = (id) => {
+    setCart((prev) => prev.filter((item) => item.id !== id));
+  };
+
+
+
 
 
 return (
@@ -82,8 +102,16 @@ return (
         />
 
         <Button label="Add Item" onClick={addItem} />
+        
         <Button label="Pay Now" onClick={handlePayment} />
       </div>
+      {message && <p className="message">{message}</p>}
+      <CartItem
+        cart={cart}
+        updateQuantity={updateQuantity}
+        deleteItem={deleteItem}
+      />
+
       <nav className="nav-home">
       <Link to="/">Go Back to Home</Link>
       </nav>
