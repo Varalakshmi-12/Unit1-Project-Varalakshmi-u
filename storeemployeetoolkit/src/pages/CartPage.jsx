@@ -48,6 +48,24 @@ export default function CartPage() {
   };
 
 
+  const handlePayment = () => {
+    if (cart.length === 0) {
+      setMessage("Cart is empty!");
+      return;
+    }
+    
+    setMessage("processing.....");
+    
+    setTimeout(() => {
+        
+            
+        
+      setMessage("✅ Payment successful! Your change due is $0.00.");
+      setCart([]); 
+    }, 2000);
+  };
+
+
 
 return (
     <section>
@@ -64,6 +82,7 @@ return (
         />
 
         <Button label="Add Item" onClick={addItem} />
+        <Button label="Pay Now" onClick={handlePayment} />
       </div>
       <nav className="nav-home">
       <Link to="/">Go Back to Home</Link>
