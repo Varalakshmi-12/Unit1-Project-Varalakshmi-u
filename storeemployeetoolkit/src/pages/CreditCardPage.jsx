@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./CreditCardPage.css";
+import Button from "../components/Button";
+
 
 
 export default function CreditCardSignup() {
@@ -109,7 +111,7 @@ export default function CreditCardSignup() {
             {errors.cards && <span className="error">{errors.cards}</span>}
           </section>
 
-          <button type="submit">Submit</button>
+          <Button label="Submit"/>
         </form>
 
         
