@@ -4,11 +4,7 @@ import "./Button.css";
 
 export default function Button({ label, image, alt, onClick }) {
   return (
-    <button className="button" onClick={onClick}
-      
-      onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
-      onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1.0)")}
-    >
+    <button className="button" onClick={onClick}>
       {image && (
         <img
           src={image}
