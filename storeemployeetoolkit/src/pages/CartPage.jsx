@@ -30,7 +30,7 @@ export default function CartPage() {
       return;
     }
 
-    // checking if the item is already exists in the cart
+    
     const exists = cart.find((item) => item.id === found.id);
 
     if (exists) {
@@ -66,7 +66,7 @@ export default function CartPage() {
     
   };
 
-  // Update quantity
+  
   const updateQuantity = (id, value) => {
     const qty = parseInt(value);
     if (qty < 1 || isNaN(qty)) return;
@@ -78,12 +78,12 @@ export default function CartPage() {
     );
   };
 
-   // Delete Item
+   
   const deleteItem = (id) => {
     setCart((prev) => prev.filter((item) => item.id !== id));
   };
 
-  // Calculate totals
+  
   const subtotal = cart.reduce(
     (sum, item) => sum + item.price * item.quantity,
     0
