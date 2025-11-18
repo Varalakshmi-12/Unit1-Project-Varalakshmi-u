@@ -8,7 +8,7 @@
 }
 
 .about-title  {
-  font-size: 1.8rem;
+  font-size: 30px;
   color:black;
   margin-bottom: 20px;
   font-weight: bold;
@@ -18,13 +18,14 @@ h3 {
   color: blue;
 }
 
-.about-text ,about-list{
+.about-text {
   font-size: 20px;
   color: black;
 }
-about-list ul{
-  font-size: 20px;
-  color:rgb(0, 255, 106);
+
+
+.about-list strong {
+  color: #1a73e8;
 }
 
 

@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./Contact.css";
 export default function Contact() {
   return (
-    <section>
-    <div>
+    <section className="contact-container">
+    <div >
     <h1>Contact Info</h1>
     <div>
     <p><strong>Support Team:</strong> +1 800 123 4567</p>
