@@ -5,12 +5,12 @@ export default function Footer() {
   const [dateTime, setDateTime] = useState(new Date());
 
   useEffect(()=> {
-    // Update every second
+    
     const timer = setInterval(() => {
       setDateTime(new Date());
     }, 1000);
 
-    // Cleanup on unmount
+    
     return () => clearInterval(timer);
   }, []);
   

@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import Button from "../components/Button";
 import "./HomePage.css";
+import "../components/Button.css";
 
 export default function HomePage() {
   const navigate = useNavigate();
