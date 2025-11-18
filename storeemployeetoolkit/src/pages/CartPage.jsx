@@ -59,12 +59,11 @@ export default function CartPage() {
     setMessage("processing.....");
     
     setTimeout(() => {
-        
-            
-        
       setMessage("✅ Payment successful! Your change due is $0.00.");
       setCart([]); 
+      
     }, 2000);
+    
   };
 
   // Update quantity

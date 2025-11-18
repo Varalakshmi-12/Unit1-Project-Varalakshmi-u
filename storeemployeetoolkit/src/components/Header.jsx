@@ -28,14 +28,14 @@ function Header() {
         </h1>
       )}
 
-      {isCart && <h1 className="header-title">Customer Checkout</h1>}
+      {isCart && <h1 className="header-title">Customer Cart Checkout</h1>}
       {isShift && <h1 className="header-title">Employee Shift Tracking</h1>}
       {isCredit && <h1 className="header-title">Customer Credit Card Signup</h1>}
       {isAbout && <h1 className="header-title">AboutUs</h1>}
       {isContact && <h1 className="header-title">ContactUs</h1>}
 
 
-      {/*Aout and Contact Nav are hidden on CartPage*/}
+      {/*About and Contact Nav are hidden on CartPage*/}
       {!isCart && (
         <nav className="nav-right">
           <NavLink to="/about" className="nav-item">About</NavLink>

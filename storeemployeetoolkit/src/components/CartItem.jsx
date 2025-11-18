@@ -31,7 +31,7 @@ export default function CartItem({ cart, updateQuantity, deleteItem }) {
             <td>{item.price * item.quantity}</td>
             <td>
               <Button
-                className="delete-btn"
+                
                 onClick={() => deleteItem(item.id)}
               label="Delete"
                 
