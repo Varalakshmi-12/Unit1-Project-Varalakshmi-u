@@ -36,9 +36,7 @@ export default function CartPage() {
     if (exists) {
       setCart((prev) =>
         prev.map((item) =>
-          item.id === found.id
-            ? { ...item, quantity: item.quantity + 1 }
-            : item
+          item.id === found.id ? { ...item, quantity: item.quantity + 1 }: item
         )
       );
     } else {
@@ -92,12 +90,9 @@ export default function CartPage() {
   const total = subtotal + tax;
 
 
-
-
-
 return (
     <section>
-        <div className="cart-container">
+      <div className="cart-container">
     
 
       <h1>Customer Cart Checkout</h1>
