@@ -22,14 +22,14 @@ export default function HomePage() {
         <Button
           label="Customer Cart"
           image="/images/cart.png"
-          alt="Employee Shift Icon"
+          alt="Cart Icon"
           onClick={() => navigate("/cart")}
         />
 
         <Button
           label="Credit Card"
           image="/images/creditcard.png"
-          alt="Cart Icon"
+          alt="Card Icon"
           onClick={() => navigate("/creditcard")}
         />
       </div>
