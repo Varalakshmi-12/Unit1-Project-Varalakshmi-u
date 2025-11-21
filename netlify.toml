@@ -1,4 +1,4 @@
 [build]
-base = “storeemployeetoolkit”
+base = "storeemployeetoolkit"
 command = “npm run build”
 publish = “dist”
